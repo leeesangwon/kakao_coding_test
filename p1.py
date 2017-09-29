@@ -2,8 +2,8 @@ def convert_input_to_proper_type(n, arr1, arr2):
     n = int(n)
     assert (arr1[0] == '[') & (arr1[-1] == ']')
     assert (arr2[0] == '[') & (arr2[-1] == ']')
-    arr1 = list(map(int, arr1[1:-1].split(',')))
-    arr2 = list(map(int, arr2[1:-1].split(',')))
+    arr1 = list(map(int, ''.join(arr1[1:-1].split()).split(',')))
+    arr2 = list(map(int, ''.join(arr2[1:-1].split()).split(',')))
     return n, arr1, arr2
 
 
